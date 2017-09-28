@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/malthe/CLionProjects/AI/main.cpp
+iostream
+-
+vector
+-
+fstream
+-
+week2/Cell.h
+/home/malthe/CLionProjects/AI/week2/Cell.h
+
+/home/malthe/CLionProjects/AI/week1/week1.cpp
+iostream
+-
+week1.h
+/home/malthe/CLionProjects/AI/week1/week1.h
+
+/home/malthe/CLionProjects/AI/week1/week1.h
+
+/home/malthe/CLionProjects/AI/week2/Cell.cpp
+Cell.h
+/home/malthe/CLionProjects/AI/week2/Cell.h
+Cell.h
+/home/malthe/CLionProjects/AI/week2/Cell.h
+iostream
+-
+stdlib.h
+-
+time.h
+-
+vector
+-
+
+/home/malthe/CLionProjects/AI/week2/Cell.h
+string
+-
+iostream
+-
+
