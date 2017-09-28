@@ -13,6 +13,8 @@ vector
 -
 fstream
 -
+thread
+-
 week2/Cell.h
 /home/malthe/CLionProjects/AI/week2/Cell.h
 

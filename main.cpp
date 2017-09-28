@@ -1,10 +1,23 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <thread>
 #include "week2/Cell.h"
 
 const int COLS = 10;
 const int ROWS = 13;
+
+const int goalX = 8;
+const int goalY = 11;
+
+struct Position{
+    int x;
+    int y;
+};
+
+int playerX, playerY;
+
+int visited[COLS][ROWS];
 
 int maze[COLS][ROWS] = {
 
@@ -21,22 +34,72 @@ int maze[COLS][ROWS] = {
 };
 
 void printPlayingField();
-
+void bfs(int x, int y);
+bool isValidPosition(int x, int y);
 
 using namespace std;
 
 int main() {
-
-    printPlayingField();
+    playerX =3;
+    playerY = 2;
+    //printPlayingField();
+    bfs(playerX, playerY);
     return 0;
 }
+
+void bfs(int x, int y) {
+    if(x== goalX && y == goalY) {
+        return;
+    }
+    std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+    printPlayingField();
+    cout << "" << endl;
+    cout << "{" << x << " , " << y <<"}"<<endl;
+    //look up
+    if(isValidPosition(x, y-1)) {
+        //cout << "TRUE";
+        playerY--;
+        bfs(x, y-1);
+    }
+    //look left
+
+    //look right
+    if(isValidPosition(x+1, y)) {
+        playerX++;
+        bfs(x+1, y);
+    }
+    //look down
+    if(isValidPosition(x, y+1)) {
+        playerY++;
+        bfs(x, y+1);
+    }
+    //look left
+    if(isValidPosition(x-1, y)) {
+        playerX--;
+        bfs(x-1,y);
+    }
+}
+
+bool isValidPosition(int x, int y) {
+
+    if(x >= 0 && x < COLS && y >=0 && y <ROWS && maze[x][y] ==0 ) {
+        return true;
+    }
+    return false;
+}
+
+
 
 void printPlayingField() {
     for(int i = 0; i <COLS; i++) {
         for(int j = 0; j< ROWS; j++) {
             int x = maze[i][j];
             int y;
-            if(x > 0) {
+            if(i==goalX && j==goalY) {
+                cout << 'g';
+            } if(i==playerX && j==playerY) {
+                cout << 'p';
+            } else if(x > 0) {
                 cout << "*";
             } else {
                 cout << " ";
