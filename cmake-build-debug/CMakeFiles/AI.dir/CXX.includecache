@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Point.cpp
+cmath
+-
+iostream
+-
+
 /home/malthe/CLionProjects/AI/main.cpp
 iostream
 -
@@ -15,8 +21,12 @@ fstream
 -
 thread
 -
+queue
+-
 week2/Cell.h
 /home/malthe/CLionProjects/AI/week2/Cell.h
+cmake-build-debug/week4/Point.cpp
+/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Point.cpp
 
 /home/malthe/CLionProjects/AI/week1/week1.cpp
 iostream

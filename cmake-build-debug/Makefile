@@ -204,6 +204,33 @@ week2/Cell.cpp.s:
 	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week2/Cell.cpp.s
 .PHONY : week2/Cell.cpp.s
 
+week4/Point.o: week4/Point.cpp.o
+
+.PHONY : week4/Point.o
+
+# target to build an object file
+week4/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Point.cpp.o
+.PHONY : week4/Point.cpp.o
+
+week4/Point.i: week4/Point.cpp.i
+
+.PHONY : week4/Point.i
+
+# target to preprocess a source file
+week4/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Point.cpp.i
+.PHONY : week4/Point.cpp.i
+
+week4/Point.s: week4/Point.cpp.s
+
+.PHONY : week4/Point.s
+
+# target to generate assembly for a file
+week4/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Point.cpp.s
+.PHONY : week4/Point.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... week2/Cell.o"
 	@echo "... week2/Cell.i"
 	@echo "... week2/Cell.s"
+	@echo "... week4/Point.o"
+	@echo "... week4/Point.i"
+	@echo "... week4/Point.s"
 .PHONY : help
 
 

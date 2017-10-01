@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/AI.dir/main.cpp.o"
   "CMakeFiles/AI.dir/week1/week1.cpp.o"
   "CMakeFiles/AI.dir/week2/Cell.cpp.o"
+  "CMakeFiles/AI.dir/week4/Point.cpp.o"
   "AI.pdb"
   "AI"
 )
