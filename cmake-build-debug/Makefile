@@ -204,6 +204,33 @@ week2/Cell.cpp.s:
 	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week2/Cell.cpp.s
 .PHONY : week2/Cell.cpp.s
 
+week4/Astar.o: week4/Astar.cpp.o
+
+.PHONY : week4/Astar.o
+
+# target to build an object file
+week4/Astar.cpp.o:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Astar.cpp.o
+.PHONY : week4/Astar.cpp.o
+
+week4/Astar.i: week4/Astar.cpp.i
+
+.PHONY : week4/Astar.i
+
+# target to preprocess a source file
+week4/Astar.cpp.i:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Astar.cpp.i
+.PHONY : week4/Astar.cpp.i
+
+week4/Astar.s: week4/Astar.cpp.s
+
+.PHONY : week4/Astar.s
+
+# target to generate assembly for a file
+week4/Astar.cpp.s:
+	$(MAKE) -f CMakeFiles/AI.dir/build.make CMakeFiles/AI.dir/week4/Astar.cpp.s
+.PHONY : week4/Astar.cpp.s
+
 week4/Point.o: week4/Point.cpp.o
 
 .PHONY : week4/Point.o
@@ -249,6 +276,9 @@ help:
 	@echo "... week2/Cell.o"
 	@echo "... week2/Cell.i"
 	@echo "... week2/Cell.s"
+	@echo "... week4/Astar.o"
+	@echo "... week4/Astar.i"
+	@echo "... week4/Astar.s"
 	@echo "... week4/Point.o"
 	@echo "... week4/Point.i"
 	@echo "... week4/Point.s"

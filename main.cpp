@@ -48,42 +48,90 @@ int maze[COLS][ROWS] = {
 void printPlayingField();
 bool dfs(int x, int y);
 bool isValidPosition(int x, int y);
+bool isValidPosition(Point point);
 //void clearScreen();
 int distance(int x, int y);
 char decideDirection(Point p);
-void bfs();
+void aStar();
 using namespace std;
 
 int main() {
     playerX =3;
     playerY = 2;
-    bfs();
+    aStar();
     //dfs(playerX, playerY);
     return 0;
 }
-//with heuristics
-void bfs() {
+//A* with heuristics
+void aStar() {
     priority_queue <Point, vector<Point>, ComparePoints> queue1;
-    Point goal(goalX,goalY);
-    Point zero(0,0);
-    Point up(playerX,playerY+1,goalX,goalY);
-    Point right(playerX+1,playerY, goalX, goalY);
-    Point down(playerX, playerY+1, goalX, goalY);
-    Point left(playerX-1,playerY, goalX, goalY);
+    Point goal(goalX,goalY, goalX, goalY);
+    Point start(playerX,playerY, goalX, goalY);
 
-    queue1.push(zero);
-    queue1.push(up);
-    queue1.push(right);
-    queue1.push(down);
-    queue1.push(left);
+    queue1.push(start);
 
     while(!queue1.empty()) {
-        Point point = queue1.top();
-        point.print(cout);
-        cout << point.dist(goal);
+
+        Point current = queue1.top();
+        visited[current.x()][current.y()] =1;
+        printPlayingField();
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        playerX = current.x();
+        playerY = current.y();
+        if(playerX==goalX && playerY==goalY) {
+            return;
+        }
+        current.print(cout);
+        cout << current.dist(goal) <<endl;
         queue1.pop();
+
+        Point up(playerX,playerY-1,goalX,goalY);
+        Point right(playerX+1,playerY, goalX, goalY);
+        Point down(playerX, playerY+1, goalX, goalY);
+        Point left(playerX-1,playerY, goalX, goalY);
+
+        if(isValidPosition(up)) {
+            queue1.push(up);
+        }
+
+        //look right
+
+        if(isValidPosition(right)) {
+            queue1.push(right);
+        }
+        //look down
+        if(isValidPosition(down)) {
+            queue1.push(down);
+        }
+        //look left
+        if(isValidPosition(left)) {
+            queue1.push(left);
+        }
+
+
     }
 
+}
+
+bool isValidPosition(Point point) {
+    int test = maze[point.x()][point.y()];
+    int test1 = 1;
+
+    if(point.x() >= 0 && point.x() < COLS && point.y() >=0 &&
+            point.y() <ROWS && maze[point.x()][point.y()] ==0
+       &&visited[point.x()][point.y()] ==0) {
+        //&&visited[point.x()][point.y()] ==0
+        return true;
+    }
+    return false;
+}
+bool isValidPosition(int x, int y) {
+    int test = maze[x][y];
+    int test1 = 1;
+    if(x >= 0 && x < COLS && y >=0 && y <ROWS && maze[x][y] ==0 &&visited[x][y] ==0 ) {
+        return true;
+    }
+    return false;
 }
 
 bool dfs(int x, int y) {
@@ -158,14 +206,6 @@ char decideDirection(Point p, Point p1) {
     return 'd';*/
 }
 
-bool isValidPosition(int x, int y) {
-    int test = maze[x][y];
-    int test1 = 1;
-    if(x >= 0 && x < COLS && y >=0 && y <ROWS && maze[x][y] ==0 &&visited[x][y] ==0 ) {
-        return true;
-    }
-    return false;
-}
 
 
 

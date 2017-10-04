@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/malthe/CLionProjects/AI/main.cpp" "/home/malthe/CLionProjects/AI/cmake-build-debug/CMakeFiles/AI.dir/main.cpp.o"
   "/home/malthe/CLionProjects/AI/week1/week1.cpp" "/home/malthe/CLionProjects/AI/cmake-build-debug/CMakeFiles/AI.dir/week1/week1.cpp.o"
   "/home/malthe/CLionProjects/AI/week2/Cell.cpp" "/home/malthe/CLionProjects/AI/cmake-build-debug/CMakeFiles/AI.dir/week2/Cell.cpp.o"
+  "/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Astar.cpp" "/home/malthe/CLionProjects/AI/cmake-build-debug/CMakeFiles/AI.dir/week4/Astar.cpp.o"
   "/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Point.cpp" "/home/malthe/CLionProjects/AI/cmake-build-debug/CMakeFiles/AI.dir/week4/Point.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

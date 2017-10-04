@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Astar.cpp">
+			<Option target="AI"/>
+		</Unit>
+		<Unit filename="/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Astar.h">
+			<Option target="AI"/>
+		</Unit>
 		<Unit filename="/home/malthe/CLionProjects/AI/cmake-build-debug/week4/Point.cpp">
 			<Option target="AI"/>
 		</Unit>
